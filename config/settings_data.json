@@ -1,0 +1,21 @@
+{
+  "current": {
+    "sections": {
+      "static-header": {
+        "type": "static-header",
+        "settings": {
+        }
+      },
+      "static-menu": {
+        "type": "static-menu",
+        "settings": {
+          "main_menu": "primary-menu",
+          "secondary_menu": "secondary-menu"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

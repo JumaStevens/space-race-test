@@ -1,0 +1,19 @@
+{% comment %}
+  * Reset and normalize styles
+{% endcomment %}
+{{ 'reset.scss' | asset_url | stylesheet_tag }}
+{{ 'normalize.scss' | asset_url | stylesheet_tag }}
+
+{% comment %}
+  * Generic UI utilities
+{% endcomment %}
+{{ 'variables.scss' | asset_url | stylesheet_tag }}
+{{ 'fonts.scss' | asset_url | stylesheet_tag }}
+{{ 'base.scss' | asset_url | stylesheet_tag }}
+{{ 'utilities.scss' | asset_url | stylesheet_tag }}
+
+{% comment %}
+  * Main header components
+{% endcomment %}
+{{ 'theme-header.scss' | asset_url | stylesheet_tag }}
+{{ 'theme-menu.scss' | asset_url | stylesheet_tag }}

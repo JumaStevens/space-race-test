@@ -1,0 +1,37 @@
+{% comment %}
+  * The theme main header component.
+  * Primary stylesheet: `~/assets/theme-header.scss`
+{% endcomment %}
+
+<header class='theme-header'>
+  <button
+    class='theme-header__menu-button u-button-icon u-menu-icon js-toggle-menu'
+    type='button'
+  >
+    Menu
+  </button>
+  <a
+    class='theme-header__logo-button'
+    href='{{ routes.root_url }}'
+  >
+    {% render 'logo',
+      class: 'theme-header__logo-svg'
+    %}
+  </a>
+  <button
+    class='theme-header__cart-button u-button-icon'
+    type='button'
+  >
+    <img
+      src='{{ "icon-cart.svg" | asset_url }}'
+      alt='Cart'
+      loading='lazy'
+    />
+  </button>
+</header>
+
+{% schema %}
+{
+  "name": "Header"
+}
+{% endschema %}

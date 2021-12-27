@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: black;
+}
+
+button,
+button:active {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+select {
+  appearance: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button:disabled,
+a:disabled {
+  cursor: not-allowed;
+}
+
+h1, h2, h3, h4 ,h5 ,h6, p, a, span, div, ul, ol, input, label, li, button, abbr, aside, header, figure, strong, b, textarea, time, blockquote {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--system-black);
+}
+
+span {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}

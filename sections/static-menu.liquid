@@ -1,0 +1,73 @@
+{% comment %}
+  * The theme main menu component.
+  * Primary stylesheet: `~/assets/theme-menu.scss`
+{% endcomment %}
+
+{% assign primaryLinks = linklists[section.settings.main_menu].links %}
+{% assign secondaryLinks = linklists[section.settings.secondary_menu].links %}
+
+<div class='theme-menu js-menu'>
+  <header class='theme-menu__header'>
+    <button
+      class='theme-menu__toggle-button u-button-icon u-menu-icon js-toggle-menu'
+      type='button'
+    >
+      Close
+    </button>
+    <a
+      class='theme-menu__logo-button'
+      href='{{ routes.root_url }}'
+    >
+      {% render 'logo',
+        class: 'theme-menu__logo-svg'
+      %}
+    </a>
+  </header>
+  <nav class='theme-menu__primary-nav'>
+    {% for link in primaryLinks %}
+      <a
+        class='theme-menu__primary-link'
+        href='{{ link.url }}'
+      >
+        {{ link.title }}
+      </a>
+    {% endfor %}
+  </nav>
+  <nav class='theme-menu__secondary-nav'>
+    {% for link in secondaryLinks %}
+      <a
+        class='theme-menu__secondary-link'
+        href='{{ link.url }}'
+      >
+        {{ link.title }}
+      </a>
+    {% endfor %}
+  </nav>
+</div>
+
+{% schema %}
+{
+  "name": "Menu",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Menu",
+      "info": "Display theme navigational menus."
+    },
+    {
+      "type": "link_list",
+      "id": "main_menu",
+      "label": "Primary Menu",
+      "info": "The primary navigation structure of your store.",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "secondary_menu",
+      "label": "Secondary Menu",
+      "info": "The secondary navigation structure of your store.",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}
